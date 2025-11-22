@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PassWord Generator</title>
+</head>
+<body>
+    <div class="container">
+
+        <h1>PassWord Generator</h1>
+        <div class="display-generator">
+            <input readonly placeholder="PassWord" class="display" data-passwordDisplay>
+
+            <button>
+                <span data-copyMsg></span>
+                <img src="assets/copy.svg" alt="" height="23" width="23">
+            </button>
+        </div>
+
+        <div class="input-container">
+
+            <div class="length-container">
+                <p>PassWord Length</p>
+                <p data-lengthNumber>0</p>
+            </div>
+            
+            <!-- length kitni rkhni -->
+            <input type="range" min="1" max="20" class="slider" step="1" data-lengthSlider>
+            
+            <!-- Kya chaiye kYa nahi -->
+             <div>
+                <input type="checkbox" id="upercase">
+                <label for="uppercase">Include UpperCase Letters</label>
+                
+                <input type="checkbox" id="lowercase">
+                <label for="lowercase">Include LowerCase Letters</label>
+
+                <input type="checkbox" id="symbol">
+                <label for="symbol">Include Symbols</label>
+
+                <input type="checkbox" id="number">
+                <label for="number">Include Numbers</label>
+             </div>
+
+             <div class="strength-container">
+                <p>Strength</p>
+                <div data-indicator></div>
+             </div>
+
+                <button class="generate-password">Generate PassWord</button>
+
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
