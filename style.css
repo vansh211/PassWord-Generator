@@ -1,0 +1,175 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --dk-violet: hsl(268, 75%, 9%);
+    --lt-violet: hsl(268, 47%, 21%);
+    --lt-violet2: hsl(281, 89%, 26%);
+    --vb-violet: hsl(285, 91%, 52%);
+    --vb-violet2: hsl(290, 70%, 36%);
+
+    --vb-yellow: hsl(52, 100%, 62%);
+
+    --pl-white: hsl(0, 0%, 100%);
+
+    --vb-cyan: hsl(176, 100%, 44%);
+    --vb-cyan2: hsl(177, 92%, 70%);
+
+    --dk-text: hsl(198, 20%, 13%);
+}
+
+body {
+    min-height: 100vh;
+    background: linear-gradient(145deg, var(--dk-violet), var(--lt-violet2));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--pl-white);
+    font-family: "Poppins", sans-serif;
+}
+
+.container {
+    width: 450px;
+    background: var(--lt-violet);
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 0 20px rgba(0,0,0,0.4);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-size: 1.6rem;
+    font-weight: 700;
+}
+
+.display-generator {
+    background: var(--dk-violet);
+    border-radius: 0.75rem;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    border: 1px solid var(--vb-violet2);
+}
+
+.display {
+    width: 80%;
+    font-size: 1.2rem;
+    border: none;
+    background: transparent;
+    color: var(--vb-yellow);
+}
+
+.display::placeholder {
+    color: var(--vb-yellow);
+}
+
+button[data-copy] {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+[data-copyMsg] {
+    position: absolute;
+    top: 23.3%;
+    opacity: 0;
+    color: var(--vb-cyan);
+    font-size: 0.75rem;
+    transition: 0.3s;
+}
+
+.active {
+    opacity: 1;
+}
+
+.input-container {
+    background: var(--lt-violet2);
+    border-radius: 1rem;
+    padding: 1.5rem;
+}
+
+.length-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+}
+
+.slider {
+    width: 100%;
+    height: 8px;
+    accent-color: var(--vb-yellow);
+    margin-bottom: 1.5rem;
+    cursor: pointer;
+}
+
+.input-container div input[type="checkbox"] {
+    margin-right: 10px;
+    accent-color: var(--vb-cyan2);
+}
+
+.input-container div label {
+    font-size: 0.95rem;
+}
+
+.input-container div {
+    margin-bottom: 0.75rem;
+}
+
+.strength-container {
+    display: flex;
+    justify-content: space-between;
+    margin: 1rem 0;
+}
+
+[data-indicator] {
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background: #555;
+    transition: 0.3s;
+}
+
+.generate-password {
+    width: 100%;
+    background: var(--vb-violet);
+    padding: 0.9rem;
+    border: none;
+    border-radius: 0.75rem;
+    font-size: 1rem;
+    font-weight: bold;
+    color: var(--pl-white);
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.generate-password:hover {
+    background: var(--vb-violet2);
+    box-shadow: 0 0 12px var(--vb-violet);
+}
+
+.check-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.check-container label {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    cursor: pointer;
+    width: 100%;
+}
+
+.check-container input[type="checkbox"] {
+    margin: 0;
+}
