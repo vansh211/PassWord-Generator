@@ -14,7 +14,8 @@ const allCheckBox = document.querySelectorAll("input[type=checkbox]");
 let password = "";
 let passwordLength = 10;
 let checkCount = 1;
-const symbols = '~!@#$%^&*()-+;:"{}[]=<>/,.';
+const symbols = ["vansh", "keshvi"] ;
+
 
 //set strangth clr grey
 handleSlider();
@@ -49,7 +50,7 @@ function generateUpperCase() {
 
 function generateSymbol() {
     let randInd = Math.floor(Math.random() * symbols.length);
-    return symbols.charAt(randInd);
+    return symbols[randInd];
 }
 
 function calcStrength() {
@@ -189,7 +190,7 @@ generateBtn.addEventListener('click', () => {
     }
 
     //shuffle the password TAKI KISI KO PAT na chle
-    password = shufflePassword();
+    // password = shufflePassword();
 
     //show in UI
     passwordDisplay.value = password;
