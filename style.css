@@ -79,10 +79,14 @@ button[data-copy] {
 
 [data-copyMsg] {
     position: absolute;
-    top: 23.3%;
+    top: 21.7%;
+    left:59%;
     opacity: 0;
-    color: var(--vb-cyan);
+    background-color: var(--dk-violet);
+    color: var(--vb-yellow);
     font-size: 0.75rem;
+    padding: 0.4rem 0.8rem;
+    border-radius: 0.5rem;
     transition: 0.3s;
 }
 
